@@ -44,6 +44,9 @@
     });
     $("#phoneText").textContent = formatPhone(content.site.whatsapp);
     $("#year").textContent = new Date().getFullYear();
+    $("#footerBadges").innerHTML = (content.site.badges || []).map(function (b) {
+      return "<li>" + icon(/halal/i.test(b) ? "check" : "shield") + "<span>" + esc(b) + "</span></li>";
+    }).join("");
 
     var ann = $("#announce");
     if (content.site.announcement) { ann.textContent = content.site.announcement; ann.hidden = false; }
