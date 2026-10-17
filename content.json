@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "House of Ketty",
+    "heading": "Tiffin Service",
+    "location": "At Jamia Nagar",
+    "tagline": "Good Food, Good Mood",
+    "intro": "Home-cooked food made in small batches by our family, in our own kitchen. Just like home.",
+    "highlights": "Fresh • Hygienic • Home-Style • Affordable",
+    "serviceArea": "Serving Jamia Nagar & Nearby Areas",
+    "whatsapp": "919211685735",
+    "announcement": "Advance monthly bookings now open!"
+  },
+  "story": {
+    "title": "Cooked by a family, for yours",
+    "text": "House of Ketty is a small family kitchen. We cook every meal in small batches, the same way we cook for ourselves, with fresh vegetables, simple masalas and no shortcuts. When you order from us, you are eating from our home.",
+    "points": [
+      { "icon": "🍲", "title": "Small batches", "text": "Only a limited number of tiffins cooked fresh each day." },
+      { "icon": "👨‍👩‍👧", "title": "A family kitchen", "text": "Cooked by our family, never a commercial kitchen." },
+      { "icon": "🏠", "title": "Just like home", "text": "Simple, wholesome ghar ka khana, made with care." }
+    ]
+  },
+  "specials": [
+    {
+      "name": "Non-Veg Tiffin",
+      "description": "Chicken or mutton dishes made on demand. Message us to know today's dish and price.",
+      "price": null,
+      "image": "",
+      "available": true
+    }
+  ],
+  "tiffins": [
+    {
+      "name": "Daily Veg Tiffin",
+      "price": 100,
+      "theme": "green",
+      "image": "images/veg-tiffin.jpg",
+      "items": ["2 Roti", "1 Seasonal Sabzi", "Dal", "Rice", "Salad", "Pickle"],
+      "available": true
+    },
+    {
+      "name": "Special Tiffin",
+      "price": 130,
+      "theme": "red",
+      "image": "images/special-tiffin.jpg",
+      "items": ["4 Roti", "2 Sabzi", "Dal", "Rice", "Salad", "Pickle", "Sweet"],
+      "available": true
+    }
+  ],
+  "plans": [
+    {
+      "name": "Veg Tiffin",
+      "theme": "green",
+      "rows": [
+        { "label": "Lunch only", "price": 2800 },
+        { "label": "Dinner only", "price": 2800 },
+        { "label": "Lunch + Dinner", "price": 5200 }
+      ]
+    },
+    {
+      "name": "Special Tiffin",
+      "theme": "red",
+      "rows": [
+        { "label": "Lunch only", "price": 3500 },
+        { "label": "Dinner only", "price": 3500 },
+        { "label": "Lunch + Dinner", "price": 6600 }
+      ]
+    }
+  ],
+  "addons": [
+    { "icon": "🫓", "name": "Extra 4 Roti", "price": 30, "available": true },
+    { "icon": "🍲", "name": "Extra Dal", "price": 30, "available": true },
+    { "icon": "🍚", "name": "Extra Rice", "price": 25, "available": true },
+    { "icon": "🥣", "name": "Curd", "price": 20, "available": true },
+    { "icon": "🍮", "name": "Sweet", "price": 25, "available": true },
+    { "icon": "🧀", "name": "Paneer dish", "price": 40, "available": true },
+    { "icon": "🍗", "name": "Non Veg", "price": null, "available": true }
+  ],
+  "service": [
+    { "icon": "home", "text": "Fresh, home-style food prepared daily" },
+    { "icon": "shield", "text": "Hygienic packaging" },
+    { "icon": "scooter", "text": "Delivery available" },
+    { "icon": "refresh", "text": "Weekly menu rotation" },
+    { "icon": "calendar", "text": "Advance monthly bookings accepted" },
+    { "icon": "pin", "text": "₹20 delivery charge outside Noor Nagar & Okhla Vihar" }
+  ]
+}

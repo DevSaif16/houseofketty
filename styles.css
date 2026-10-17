@@ -1,0 +1,279 @@
+:root {
+  --cream: #fbf6e6;
+  --paper: #fffdf6;
+  --ink: #1f2a20;
+  --muted: #5d6a5e;
+  --green: #1f5f2f;
+  --green-2: #2e7d3c;
+  --green-soft: #eaf4e2;
+  --red: #c4182b;
+  --red-soft: #fde8e7;
+  --yellow: #f7d51d;
+  --yellow-soft: #fff6d2;
+  --wa: #25d366;
+  --radius: 18px;
+  --shadow: 0 6px 20px rgba(31, 42, 32, .08);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 400 17px/1.55 "Nunito", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: "Baloo 2", system-ui, sans-serif; line-height: 1.1; margin: 0; }
+.wrap { max-width: 1080px; margin-left: auto; margin-right: auto; padding: 0 16px; }
+.ico { width: 1.1em; height: 1.1em; flex: none; vertical-align: -0.15em; }
+.script { font-family: "Kalam", cursive; }
+
+/* Brush-stroke labels, echoing the flyer */
+.brush {
+  display: inline-flex; align-items: center; gap: .4em;
+  padding: .18em .85em .22em;
+  color: #fff;
+  clip-path: polygon(1% 12%, 10% 2%, 35% 7%, 62% 0, 90% 5%, 100% 0, 98% 38%, 100% 70%, 97% 100%, 70% 94%, 42% 100%, 14% 95%, 0 100%, 2% 62%, 0 35%);
+}
+.brush-green { background: var(--green); }
+.brush-red { background: var(--red); }
+.brush-yellow { background: var(--yellow); color: var(--ink); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  min-height: 48px; padding: 0 1.3em;
+  border: 0; border-radius: 999px;
+  font: 700 1rem/1 "Nunito", sans-serif;
+  text-decoration: none; cursor: pointer;
+  transition: transform .15s, box-shadow .15s, background .15s;
+}
+.btn:active { transform: scale(.97); }
+.btn-wa { background: var(--wa); color: #06331a; box-shadow: 0 4px 14px rgba(37, 211, 102, .35); }
+.btn-wa:hover { background: #1ebe5b; }
+.btn-ghost { background: transparent; color: var(--green); border: 2px solid var(--green); }
+.btn-ghost:hover { background: var(--green-soft); }
+.btn-light { background: rgba(255,255,255,.14); color: #fff; }
+.btn-sm { min-height: 40px; padding: 0 1em; font-size: .92rem; }
+
+/* Top bar */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 16px;
+  background: rgba(251, 246, 230, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(31, 95, 47, .1);
+}
+.brand {
+  display: flex; align-items: center; gap: 8px;
+  font: 800 1.35rem/1 "Baloo 2", sans-serif; color: var(--green); text-decoration: none;
+}
+.brand-hat { width: 34px; height: 34px; color: var(--green); }
+
+.announce {
+  background: var(--yellow); color: var(--ink);
+  text-align: center; font-weight: 700; padding: 8px 16px; font-size: .95rem;
+}
+
+/* Hero */
+.hero {
+  display: grid; gap: 24px; align-items: center;
+  padding-top: 28px; padding-bottom: 12px;
+}
+.tagline { color: var(--green); font-size: 1.5rem; margin: 0 0 6px; transform: rotate(-3deg); transform-origin: left; }
+.hero-title { font-size: clamp(2.6rem, 9vw, 4.4rem); font-weight: 800; }
+.hero-loc {
+  display: inline-flex; align-items: center; gap: .35em;
+  margin: 10px 0 0; padding: .1em .8em;
+  background: var(--yellow);
+  font: 800 clamp(1.4rem, 5vw, 2rem)/1.3 "Baloo 2", sans-serif; color: var(--green);
+  clip-path: polygon(0 10%, 30% 0, 70% 6%, 100% 0, 98% 50%, 100% 100%, 60% 94%, 20% 100%, 2% 92%);
+}
+.hero-intro { font-size: 1.15rem; color: var(--ink); margin: 18px 0 20px; max-width: 34em; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.highlights { margin: 18px 0 0; color: var(--green); font-weight: 700; letter-spacing: .02em; }
+.hero-img { position: relative; justify-self: center; max-width: 420px; width: 100%; }
+.hero-img img {
+  width: 100%; height: auto; border-radius: 26px;
+  box-shadow: 0 18px 40px rgba(31, 42, 32, .18);
+  transform: rotate(2deg);
+  background: #fff;
+}
+.hero-img::after {
+  content: "Made at home"; position: absolute; left: -6px; bottom: 18px;
+  background: var(--red); color: #fff;
+  font: 700 1.05rem/1 "Kalam", cursive; padding: 10px 14px; border-radius: 12px;
+  transform: rotate(-5deg); box-shadow: var(--shadow);
+}
+
+/* Story / USP */
+.story { padding-top: 40px; padding-bottom: 8px; text-align: center; }
+.section-title { font-size: clamp(1.8rem, 5vw, 2.5rem); color: var(--green); font-weight: 800; }
+.story-text { max-width: 40em; margin: 12px auto 24px; color: var(--muted); font-size: 1.08rem; }
+.points { display: grid; gap: 14px; }
+.point {
+  background: var(--paper); border-radius: var(--radius); padding: 18px;
+  box-shadow: var(--shadow); text-align: left;
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.point-ico {
+  flex: none; width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 1.6rem; background: var(--yellow-soft);
+}
+.point h3 { font-size: 1.2rem; color: var(--green); }
+.point p { margin: 4px 0 0; color: var(--muted); font-size: .98rem; }
+
+/* Section headers */
+section + section { margin-top: 44px; }
+.section-brush { font-size: clamp(1.6rem, 5vw, 2.2rem); font-weight: 800; margin-bottom: 18px; }
+.panel-brush { font-size: 1.45rem; font-weight: 800; margin-bottom: 14px; }
+
+/* Cards */
+.tiffins, .plans, .specials { display: grid; gap: 18px; }
+.card {
+  background: var(--paper); border: 2px solid var(--green); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.card.red { border-color: var(--red); }
+.card.soldout { opacity: .6; }
+.card-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.card-head .brush { font-size: 1.55rem; font-weight: 800; }
+.price-badge {
+  font: 800 1.9rem/1 "Baloo 2", sans-serif; color: var(--ink);
+  background: var(--yellow); padding: .15em .55em .1em;
+  clip-path: polygon(0 8%, 40% 0, 100% 6%, 97% 55%, 100% 100%, 50% 94%, 3% 100%, 0 50%);
+}
+.card-body { display: grid; grid-template-columns: 1fr 1.2fr; gap: 14px; align-items: center; }
+.card-body.noimg { grid-template-columns: 1fr; }
+.items { list-style: none; margin: 0; padding: 0; }
+.items li { padding: 3px 0 3px 18px; position: relative; font-weight: 600; }
+.items li::before {
+  content: ""; position: absolute; left: 2px; top: .7em;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--ink);
+}
+.card-img { border-radius: 14px; width: 100%; aspect-ratio: 9/10; object-fit: cover; }
+.card-desc { margin: 0; color: var(--muted); }
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; }
+.tag-soldout { font-weight: 700; color: var(--red); }
+
+/* Quantity stepper */
+.stepper { display: inline-flex; align-items: center; gap: 4px; background: var(--green-soft); border-radius: 999px; padding: 4px; }
+.stepper button {
+  width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer;
+  background: #fff; color: var(--green); font: 800 1.3rem/1 "Nunito", sans-serif;
+}
+.stepper button:hover { background: var(--green); color: #fff; }
+.stepper output { min-width: 28px; text-align: center; font-weight: 800; }
+.add-btn { background: var(--green); color: #fff; }
+.add-btn:hover { background: var(--green-2); }
+.card.red .add-btn { background: var(--red); }
+.card.red .stepper { background: var(--red-soft); }
+.card.red .stepper button { color: var(--red); }
+.card.red .stepper button:hover { background: var(--red); color: #fff; }
+
+/* Plans */
+.plan { border-radius: var(--radius); overflow: hidden; border: 2px solid var(--green); background: var(--green-soft); box-shadow: var(--shadow); }
+.plan.red { border-color: var(--red); background: var(--red-soft); }
+.plan-head {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--green); color: #fff; padding: 12px 18px;
+  font: 800 1.6rem/1.1 "Baloo 2", sans-serif;
+}
+.plan.red .plan-head { background: var(--red); }
+.plan-head .ico { color: var(--yellow); width: 1.2em; height: 1.2em; }
+.plan-rows { list-style: none; margin: 0; padding: 8px 18px 14px; }
+.plan-row {
+  display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 10px;
+  padding: 10px 0; border-bottom: 1px dashed rgba(31, 42, 32, .18);
+}
+.plan-row:last-child { border-bottom: 0; }
+.plan-row .label { font-weight: 700; }
+.plan.red .plan-row .label { color: var(--red); }
+.plan-row .amt { font: 800 1.2rem/1 "Baloo 2", sans-serif; white-space: nowrap; }
+.plan-row .amt small { font: 600 .8rem "Nunito", sans-serif; color: var(--muted); }
+.book-btn {
+  border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; text-decoration: none;
+  background: var(--green); color: #fff; font: 700 .85rem/1 "Nunito", sans-serif;
+}
+.plan.red .book-btn { background: var(--red); }
+
+/* Add-ons and service panels */
+.two-col { display: grid; gap: 18px; }
+.panel { border-radius: var(--radius); padding: 18px; border: 2px solid var(--green); box-shadow: var(--shadow); }
+.panel-green { background: var(--green-soft); }
+.panel-yellow { background: var(--yellow-soft); border-color: #e8b923; }
+.addons, .service { list-style: none; margin: 0; padding: 0; }
+.addon {
+  display: grid; grid-template-columns: 40px 1fr auto auto; align-items: center; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid rgba(31, 95, 47, .15);
+}
+.addon:last-child { border-bottom: 0; }
+.addon .emoji { font-size: 1.6rem; text-align: center; }
+.addon .name { font-weight: 700; }
+.addon .amt { font: 800 1.15rem/1 "Baloo 2", sans-serif; }
+.addon .demand { font-weight: 700; color: var(--muted); font-size: .95rem; }
+.addon .stepper { padding: 2px; }
+.addon .stepper button { width: 34px; height: 34px; font-size: 1.1rem; }
+.addon-add {
+  width: 36px; height: 36px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--green); color: #fff; font: 800 1.3rem/1 "Nunito", sans-serif;
+}
+.ask-link { color: var(--green); font-weight: 700; font-size: .9rem; }
+.service li { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; font-weight: 600; }
+.service .ico { width: 28px; height: 28px; color: var(--green); }
+
+/* Footer */
+.footer { margin-top: 56px; background: var(--green); color: #fff; padding: 36px 0 120px; text-align: center; }
+.footer-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.footer-kicker { margin: 0; font: 700 clamp(1.5rem, 5vw, 2rem)/1.1 "Kalam", cursive; color: var(--yellow); transform: rotate(-2deg); }
+.footer-phone {
+  display: inline-flex; align-items: center; gap: .4em; text-decoration: none;
+  background: var(--yellow); color: var(--ink);
+  font: 800 clamp(1.6rem, 7vw, 2.6rem)/1 "Baloo 2", sans-serif;
+  padding: .25em .7em .15em;
+  clip-path: polygon(0 10%, 25% 0, 75% 8%, 100% 0, 98% 55%, 100% 100%, 60% 92%, 25% 100%, 2% 94%);
+}
+.footer-phone .ico { color: #128c3e; }
+.footer-line { margin: 0; display: inline-flex; align-items: center; gap: .4em; font-weight: 600; }
+.footer-small { margin: 16px 0 0; font-size: .85rem; opacity: .75; }
+
+/* Floating WhatsApp + order bar */
+.fab {
+  position: fixed; right: 16px; bottom: 16px; z-index: 30;
+  width: 60px; height: 60px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--wa); color: #fff; box-shadow: 0 8px 22px rgba(0,0,0,.25);
+}
+.fab .ico { width: 32px; height: 32px; }
+body.has-order .fab { display: none; }
+.orderbar {
+  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30;
+  max-width: 640px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px;
+  background: #13361c; color: #fff; border-radius: 20px; padding: 10px 10px 10px 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.3);
+}
+.orderbar[hidden] { display: none; }
+.orderbar-info { flex: 1; display: flex; flex-direction: column; line-height: 1.2; }
+.orderbar-info span { font: 800 1.25rem/1.1 "Baloo 2", sans-serif; color: var(--yellow); }
+
+.loading { text-align: center; color: var(--muted); padding: 30px 0; }
+
+@media (min-width: 720px) {
+  .hero { grid-template-columns: 1.15fr 1fr; padding-top: 48px; }
+  .points { grid-template-columns: repeat(3, 1fr); }
+  .point { flex-direction: column; }
+  .tiffins, .plans, .specials, .two-col { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  .card-body { grid-template-columns: 1fr; }
+  .card-img { aspect-ratio: 4/3; }
+  .orderbar .btn-light { display: none; }
+}
